@@ -1,18 +1,18 @@
 import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
-const portfolioItems = [
+const webProjectItems = [
   {
     imgSrc: "./img/HeightLandmark.png",
     heading: "Height Beijing Landmarks",
     description: "An ingenious trip to discover the most famous landmarks of the Beijing city from the perspective of their height.",
     src: 'http://wenyuluo.com/HeightLandmark',
   },
-  {
-    imgSrc: "./img/portfolio-2.jpg",
-    heading: "Ice Cream",
-    description:
-      "A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!"
-  },
+  // {
+  //   imgSrc: "./img/portfolio-2.jpg",
+  //   heading: "Ice Cream",
+  //   description:
+  //     "A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!"
+  // },
   // {
   //   imgSrc: "./img/portfolio-3.jpg",
   //   heading: "Strawberries",
@@ -32,11 +32,11 @@ const PortfolioSection = () => (
       <div className="container">
         <div className="content-section-heading text-center">
           <h3 className="text-secondary mb-0">Portfolio</h3>
-          <h2 className="mb-5">Recent Projects</h2>
+          <h2 className="mb-5">Web Projects</h2>
         </div>
         <div className="row no-gutters">
-          {portfolioItems.map((project, index) => (
-            <div className="col-lg-6" key={`portfolio_item_${index}`}>
+          {webProjectItems.map((project, index) => (
+            <div className="col-lg-6 mb-5" key={`portfolio_item_${index}`}>
               <a className="portfolio-item" href={project.src}>
                 <span className="caption">
                   <span className="caption-content">
@@ -49,9 +49,16 @@ const PortfolioSection = () => (
             </div>
           ))}
         </div>
+        <div className="content-section-heading text-center">
+          <h2 className="mb-5">Cinematic Clip</h2>
+        </div>
+        <div className="row no-gutters">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/y7QoI6SWa_E?rel=0&amp;showinfo=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
   </ScrollableAnchor>
 );
+
 
 export default PortfolioSection;
