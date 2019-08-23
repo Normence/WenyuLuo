@@ -7,6 +7,12 @@ const webProjectItems = [
     description: "An ingenious trip to discover the most famous landmarks of the Beijing city from the perspective of their height.",
     src: 'http://wenyuluo.com/HeightLandmark',
   },
+  {
+    imgSrc: "./img/TytoItinerary.png",
+    heading: "TYTO Itinerary Builder",
+    description: "A TripAdvisor intern hackathon project that helps you build your itinerary easily with products from TripAdvisor.",
+    src: 'http://wenyuluo.com/TytoItinerary',
+  },
   // {
   //   imgSrc: "./img/portfolio-2.jpg",
   //   heading: "Ice Cream",
@@ -31,12 +37,12 @@ const PortfolioSection = () => (
     <section className="content-section">
       <div className="container">
         <div className="content-section-heading text-center">
-          <h3 className="text-secondary mb-0">Portfolio</h3>
+          <h3 className="text-secondary mb-2">Portfolio</h3>
           <h2 className="mb-5">Web Projects</h2>
         </div>
-        <div className="row no-gutters">
+        <div>
           {webProjectItems.map((project, index) => (
-            <div className="col-lg-6 mb-5" key={`portfolio_item_${index}`}>
+            <div className="mb-5" key={`portfolio_item_${index}`}>
               <a className="portfolio-item" href={project.src}>
                 <span className="caption">
                   <span className="caption-content">
@@ -50,10 +56,13 @@ const PortfolioSection = () => (
           ))}
         </div>
         <div className="content-section-heading text-center">
-          <h2 className="mb-5">Cinematic Clip</h2>
+          <h2 className="mb-5">Game Projects</h2>
         </div>
-        <div className="row no-gutters">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/y7QoI6SWa_E?rel=0&amp;showinfo=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div className='d-flex flex-column align-items-center'>
+          <div className='mb-5'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7AxXwMAbs-k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/nSnVwmP-nSA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ const MapSection = () => (
   <ScrollableAnchor id="contact">
     <section className="map">
       <iframe
-      title="where-we-are-located"
+        title="where-we-are-located"
         width="100%"
         height="100%"
         frameBorder="0"
